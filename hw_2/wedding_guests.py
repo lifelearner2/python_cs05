@@ -20,6 +20,7 @@ bride = []
 groom = []
 
 #iterating over the guest list and then accessing the name and supporting values within each dictionary/guest
+#guest represents the "key" and guest_list represents the "dictionary"
 for guest in guest_list: 
     name = guest['Name']  #accessing the value('Name') and assigning it to this variable
     supporting = guest['supporting']   #storing value of supporting party to this variable
@@ -45,7 +46,8 @@ goodbye_message = "Thank you, see you at the wedding!"
 #variable to determine if the while loop will continue to run (I got help for this part)
 add_more = True
 
-#starts while loop until add_more variable is set to false
+#starts while loop until add_more variable is set to false 
+#could have also used while True instead of add_more variable
 while add_more:
     #asks user to enter guest and either bride or groom and stores that info in variable called user_guest and gives them the option to enter again or quit
     user_guest = input("Enter guest name and who they are supporting (use this format - 'Jane: bride') or type 'q' to quit: ")    
