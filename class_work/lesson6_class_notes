@@ -1,0 +1,135 @@
+Course Review
+
+.lower #prints variable in lower case
+.upper #prints var in upper case
+test = "Taco"
+test.lower()
+print(test)
+#output is 'taco'
+
+to capitalize first letter only
+w = 'banana'
+w[0] = w[0].upper()
+w[1:] = w[1].lower)
+
+or try using .title()
+
+data structures - lists and dicts
+Lists are ordered and start at zero.
+dicts - key/value pairs
+
+tuples - like a list and index them and assign var but can't append to them.  - a pair of things that are together. 
+
+can declare a list as empty with []
+or you can start a list with what you want it to be
+
+empty dict {}
+{'key': 'value'}
+
+
+Student Database: of python students
+pStud = {'abc@gmail.com': 'Michael', 
+        'bcd@gmail.com': 'Jeff',
+        'hij@gmail.com': 'Harry'
+}
+dictionary in a dictionary
+pStud = {'abc@gmail.com': {name: 'Michael', 'acct_num': '123'}
+        'bcd@gmail.com': {name': 'Jeff', 'acct_num': '567'}
+        'hij@gmail.com': {'name': 'Harry', 'acct_num': '789'}
+}
+output ?:
+pstud['abc@gmail.com']['name']
+
+use json for api's
+json.dump 
+
+for loop - for everything in this list or dict do something #everything can be named anything
+
+can also do for i in range  do something #starts at zero and i can be called anything
+
+use for loop if you know how long you want to do something - only do this once if it's true - for i in range(20) - do it 20 times
+
+use while loop if you don't know how long - keep doing this as long as it's true
+break should be used with while loops to stop it. 
+can put a try/except instead of break - whenever you get to except you say break
+
+to find something in a string
+test = 'Banana'
+if 'n' in test:
+    print('yes')
+    
+    or
+    
+val = test.find('n')
+if val >= 1: #1 represents yes ?
+    print('yes')
+    
+functions with defaults 
+parameters must be in same order 
+
+def fun2(ban, taco = 1)
+print(ban * taco)
+
+fun2(0, 4)
+#ban is 0 and taco is 4 and multiplying them is zero
+
+fun2('hi', 2)
+#this gives error cuz can't multiply string and integer/number
+
+csv library comes with python
+
+with open('my_csv_input.csv') as readFile:
+    reader = csv.reader(readFile) #gives a list of lists - with data in each cell
+    next(reader) #skip titles on row (read any file you are working with )
+    
+for i, row in enumerate(reader): #more advanced for loop. for i in range, however long reader is - enumerate the rows adn tell me which row I"m on assigned to value i
+    print(row) #prints data on row
+    print(i) #prints the row number we are on
+
+clean data
+ask yourself what data do you need for code to work so you don't put in data that you don't need 
+always make a copy, don't change original data
+
+could store in dictionary where any duplicates would be overwritten cuz only one key/value 
+
+Try adn Except
+try adn do something but if it's not working then it's an exception to rule..
+except is if try doesn't work. Then we will run the code "didn't work"
+
+else - print whatever - this is if Try did work
+
+APIs
+Application Program Interface - if I have connected device or an app they likley have an api so you can get info from them 
+like - weather api - what time is sunrise, if that time is now, play this song or on another - send this email.
+Roku Tv has an API
+if steps were more than 7500 turn on tv re; fitness apps
+
+tiers of api - may or may not be up to date or very often if on free version
+
+throttling is wht companies do when you call them with api's too often and they slow you down to try to get you to upgrade 
+
+kayak.com and skyscanner has an api for flight prices - if price now is less than or more than $20 send me an email
+
+twilio api for text message - free or low from django.conf import settings
+
+if this then that ifttt - tons of services - airtable integrations
+vsync smart lights 
+webhook gives you a custom url - you can tell skyscanner to go url 
+chromium gets all html data - when it's "open" then you can tell it do something
+don't let computers/ai have your credit card and buy things for you
+have them tell you how to buy it 
+rapid ai 
+yonomi
+zappier for business
+slack 
+
+bots could be used to buy concert tix but advise against it cuz mistakes in code coudl happen and then buy thousands accidentally
+Github - grab code
+PY image search - computer vision, face tracking, detecting if sleep at wheel 
+Medium - blog posts and articles about what they built - you can take their code and make it better
+youtube - videos on CS 
+Libraries and APIs for gamil, fitbit, sensors, smart home type python api and whatever you want
+Intermediate class at Stanford could be your next step
+
+
+
